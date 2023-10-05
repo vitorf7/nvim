@@ -1,18 +1,11 @@
 return {
   "telescope.nvim",
   dependencies = {
+    "rcarriga/nvim-notify",
+    "ThePrimeagen/harpoon",
     {
       "nvim-telescope/telescope-fzf-native.nvim",
       build = "make",
-      config = function()
-        require("telescope").load_extension("fzf")
-      end,
-    },
-    {
-      "rcarriga/nvim-notify",
-      config = function()
-        require("telescope").load_extension("notify")
-      end,
     },
   },
   opts = {
@@ -25,4 +18,11 @@ return {
       },
     },
   },
+  config = function(_, opts)
+    local telescope = require("telescope")
+    telescope.setup(opts)
+    telescope.load_extension("fzf")
+    telescope.load_extension("harpoon")
+    telescope.load_extension("notify")
+  end,
 }

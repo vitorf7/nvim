@@ -12,6 +12,7 @@ return {
     "hrsh7th/cmp-emoji",
     "hrsh7th/cmp-cmdline",
     "hrsh7th/cmp-nvim-lua",
+    "petertriho/cmp-git",
   },
   ---@param opts cmp.ConfigSchema
   opts = function(_, opts)
@@ -20,7 +21,6 @@ return {
     --   local line, col = unpack(vim.api.nvim_win_get_cursor(0))
     --   return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
     -- end
-
     local check_backspace = function()
       local col = vim.fn.col(".") - 1
       return col == 0 or vim.fn.getline("."):sub(col, col):match("%s")
@@ -32,6 +32,8 @@ return {
     local sources = {
       { name = "emoji" },
       { name = "nvim_lua" },
+      { name = "git" },
+      { name = "cmdline" },
     }
     opts.sources = cmp.config.sources(vim.list_extend(opts.sources, sources))
 
