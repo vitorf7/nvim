@@ -21,6 +21,7 @@ M.servers = {
   "marksman",
   "dockerls",
   "golangci_lint_ls",
+  "taplo",
 }
 
 M.linters = {
@@ -70,6 +71,7 @@ M.parsers = {
   "gomod",
   "gosum",
   "gowork",
+  "toml",
 }
 
 M.mason_tools = {

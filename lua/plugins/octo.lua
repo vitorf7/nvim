@@ -12,6 +12,7 @@ return {
       enable_builtin = true,
     })
     vim.cmd([[hi OctoEditable guibg=none]])
+    vim.treesitter.language.register("markdown", "octo")
   end,
   keys = {
     { "<leader>o", "<cmd>Octo<cr>", desc = "Octo", mode = { "n", "v" } },

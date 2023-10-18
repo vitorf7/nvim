@@ -2,7 +2,7 @@ return {
   "folke/which-key.nvim",
   opts = {
     defaults = {
-      ["<leader>a"] = { "<cmd>Alpha<cr>", "Alpha" },
+      ["<leader>a"] = { "<cmd>Dashboard<cr>", "Dashboard" },
       ["<leader>w"] = { "<cmd>w!<CR>", "Save" },
       ["<leader>l"] = {
         name = "LSP",

@@ -4,7 +4,7 @@
 -- }
 require("lazyvim.plugins.lsp")
 return {
-  on_attach = require("lazyvim.util").on_attach(function(client, _)
+  on_attach = require("lazyvim.util").lsp.on_attach(function(client, _)
     if client.server_capabilities.codeLensProvider then
       local _, _ = pcall(vim.lsp.codelens.refresh)
     end

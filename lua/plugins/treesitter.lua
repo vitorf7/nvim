@@ -1,4 +1,3 @@
-vim.treesitter.language.register("markdown", "octo")
 local M = {
   "nvim-treesitter/nvim-treesitter",
   opts = function(_, opts)

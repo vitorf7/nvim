@@ -6,6 +6,10 @@ return {
     },
   },
   { import = "plugins" },
+
+  -- Coding
+  { import = "lazyvim.plugins.extras.coding.codeium" },
+
   -- DAP
   { import = "lazyvim.plugins.extras.dap.core" },
   { import = "lazyvim.plugins.extras.dap.nlua" },
