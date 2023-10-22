@@ -43,11 +43,11 @@ vim.opt.swapfile = false -- creates a swapfile
 -- vim.opt.formatoptions:remove({ "c", "r", "o" }) -- This is a sequence of letters which describes how automatic formatting is to be done
 -- vim.opt.linebreak = true
 -- Folding
-vim.opt.foldcolumn = "1"
-vim.opt.foldlevel = 99
-vim.opt.foldtext = "v:lua.require'lazyvim.util.ui'.foldtext()"
-vim.opt.foldmethod = "expr"
-vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+-- vim.opt.foldcolumn = "1"
+-- vim.opt.foldlevel = 99
+-- vim.opt.foldtext = "v:lua.require'lazyvim.util.ui'.foldtext()"
+-- vim.opt.foldmethod = "expr"
+-- vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 vim.opt.colorcolumn = "80,140"
 vim.opt.termguicolors = true
 
