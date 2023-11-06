@@ -1,20 +1,7 @@
 return {
   "neovim/nvim-lspconfig",
-  dependencies = {
-    -- {
-    --   "SmiteshP/nvim-navbuddy",
-    --   dependencies = {
-    --     {
-    --       "SmiteshP/nvim-navic",
-    --     },
-    --     "MunifTanjim/nui.nvim",
-    --   },
-    --   opts = { lsp = { auto_attach = true } },
-    -- },
-  },
-  keys = {
-    -- { "<leader>ln", "<cmd>Navbuddy<CR>", desc = "Navbuddy" },
-  },
+  dependencies = {},
+  keys = {},
   init = function()
     local keys = require("lazyvim.plugins.lsp.keymaps").get()
     keys[#keys + 1] = { "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>" }

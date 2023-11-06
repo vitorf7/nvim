@@ -1,6 +1,6 @@
 return {
   "nvimdev/dashboard-nvim",
-  enabled = true,
+  enabled = false,
   opts = function(_, opts)
     local logo = [[
 ██╗      ██████╗ ██████╗ ██████╗     ██╗   ██╗██╗████████╗ ██████╗ ██████╗ ███████╗███████╗
@@ -23,7 +23,8 @@ return {
 
     updateMason.desc = updateMason.desc .. string.rep(" ", 43 - #updateMason.desc)
     updateMason.key_format = "  %s"
-    table.insert(opts.config.center, 10, updateMason)
+    local lastPosition = #opts.config.center
+    table.insert(opts.config.center, lastPosition, updateMason)
   end,
   keys = {
     { "<leader>a", "<cmd>Dashboard<cr>", desc = "Dashboard" },

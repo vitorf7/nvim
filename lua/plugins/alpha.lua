@@ -1,6 +1,6 @@
 return {
   "goolord/alpha-nvim",
-  enabled = false,
+  enabled = true,
   opts = function(_, opts)
     local dashboard = require("alpha.themes.dashboard")
 
@@ -17,7 +17,8 @@ return {
     local updateMason = dashboard.button("u", " " .. " Update Mason", ":Mason<CR>")
     updateMason.opts.hl = "AlphaButtons"
     updateMason.opts.hl_shortcut = "AlphaShortcut"
-    table.insert(opts.section.buttons.val, 10, updateMason)
+    local lastPosition = #opts.section.buttons.val
+    table.insert(opts.section.buttons.val, lastPosition, updateMason)
   end,
   keys = {
     { "<leader>a", "<cmd>Alpha<cr>", desc = "Dashboard" },
