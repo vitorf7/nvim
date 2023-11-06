@@ -32,7 +32,7 @@ return {
     local sources = {
       { name = "emoji" },
       { name = "nvim_lua" },
-      { name = "git" },
+      -- { name = "git" },
       { name = "cmdline" },
     }
     opts.sources = cmp.config.sources(vim.list_extend(opts.sources, sources))
