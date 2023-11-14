@@ -7,12 +7,6 @@ return {
   -- sqlite is only needed if you want to use frecency sorting
   dependencies = { "kkharji/sqlite.lua" },
   opts = {
-    -- lazy_nvim = {
-    --   auto_register = true,
-    -- },
-    -- which_key = {
-    --   auto_register = true,
-    -- },
     extensions = {
       lazy_nvim = {
         auto_register = true,
@@ -26,7 +20,4 @@ return {
   config = function(_, opts)
     require("legendary").setup(opts)
   end,
-  keys = {
-    { "<M-p>", "<cmd>Legendary<cr>", desc = "Open Legendary Command Pallete" },
-  },
 }
