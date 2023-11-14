@@ -42,6 +42,7 @@ vim.opt.swapfile = false -- creates a swapfile
 -- vim.opt.iskeyword:append("-") -- treats words with `-` as single words
 -- vim.opt.formatoptions:remove({ "c", "r", "o" }) -- This is a sequence of letters which describes how automatic formatting is to be done
 -- vim.opt.linebreak = true
+
 -- Folding
 -- vim.opt.foldcolumn = "1"
 -- vim.opt.foldlevel = 99
@@ -54,4 +55,3 @@ vim.opt.termguicolors = true
 -- Transparency for catppuccin theme because of nvim-cmp and lazyvim setting default values.
 vim.o.pumblend = 0
 vim.o.winblend = 0
--- vim.loader.enable()
