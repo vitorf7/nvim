@@ -55,3 +55,6 @@ vim.opt.termguicolors = true
 -- Transparency for catppuccin theme because of nvim-cmp and lazyvim setting default values.
 vim.o.pumblend = 0
 vim.o.winblend = 0
+
+-- Turn ON editorcofig functionality
+vim.g.editorconfig = true
