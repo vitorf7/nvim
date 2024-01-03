@@ -1,1 +1,20 @@
 return {}
+-- return {
+--   "folke/edgy.nvim",
+--   optional = true,
+--   opts = function(_, opts)
+--     table.insert(opts.right, {
+--       title = "Database",
+--       ft = "dbui",
+--       pinned = true,
+--       open = function()
+--         vim.cmd("DBUI")
+--       end,
+--     })
+--
+--     table.insert(opts.bottom, {
+--       title = "DB Query Result",
+--       ft = "dbout",
+--     })
+--   end,
+-- }

@@ -3,7 +3,8 @@ return {
   event = "VeryLazy",
   opts = function(_, opts)
     opts.options = vim.list_extend(opts.options, {
-      theme = "catppuccin",
+      -- theme = "catppuccin",
+      theme = "fluoromachine",
     })
   end,
 }
