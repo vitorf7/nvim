@@ -87,7 +87,7 @@ return {
     },
     extensions = {
       smart_open = {
-        -- cwd_only = true,
+        cwd_only = true,
         filename_first = true,
       },
     },

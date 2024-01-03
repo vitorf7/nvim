@@ -4,6 +4,8 @@ return {
     formatters_by_ft = {
       go = { "gofumpt", "goimports", "golines" },
       toml = { "taplo" },
+      sql = { "sql_formatter" },
+      mysql = { "sql_formatter" },
     },
     formatters = {
       golines = {
