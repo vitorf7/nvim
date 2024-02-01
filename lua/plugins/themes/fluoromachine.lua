@@ -1,4 +1,4 @@
-return {
+local M = {
   "maxmx03/fluoromachine.nvim",
   config = function()
     local fm = require("fluoromachine")
@@ -12,3 +12,5 @@ return {
     vim.cmd.colorscheme("fluoromachine")
   end,
 }
+
+return M
