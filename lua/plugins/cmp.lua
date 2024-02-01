@@ -5,12 +5,8 @@ return {
     "CmdlineEnter",
   },
   dependencies = {
-    "hrsh7th/cmp-nvim-lsp",
-    "hrsh7th/cmp-buffer",
-    "hrsh7th/cmp-path",
-    "saadparwaiz1/cmp_luasnip",
     "hrsh7th/cmp-emoji",
-    "hrsh7th/cmp-cmdline",
+    -- "hrsh7th/cmp-cmdline",
     "hrsh7th/cmp-nvim-lua",
     "petertriho/cmp-git",
   },
@@ -31,11 +27,32 @@ return {
 
     local sources = {
       { name = "emoji" },
+      -- { name = "cmdline" },
       { name = "nvim_lua" },
-      -- { name = "git" },
-      { name = "cmdline" },
+      { name = "git" },
     }
     opts.sources = cmp.config.sources(vim.list_extend(opts.sources, sources))
+
+    -- `/` cmdline setup.
+    cmp.setup.cmdline("/", {
+      sources = {
+        { name = "buffer" },
+      },
+    })
+
+    -- `:` cmdline setup.
+    cmp.setup.cmdline(":", {
+      sources = cmp.config.sources({
+        { name = "path" },
+      }, {
+        {
+          name = "cmdline",
+          option = {
+            ignore_cmds = { "Man", "!" },
+          },
+        },
+      }),
+    })
 
     opts.window = {
       completion = cmp.config.window.bordered(),
@@ -81,5 +98,14 @@ return {
         "s",
       }),
     })
+
+    opts.formatting.format = function(entry, item)
+      local icons = require("lazyvim.config").icons.kinds
+      if icons[item.kind] then
+        item.kind = icons[item.kind] .. item.kind
+      end
+      item.menu = "[ " .. entry.source.name .. " ]"
+      return item
+    end
   end,
 }
