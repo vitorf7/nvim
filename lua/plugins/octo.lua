@@ -11,7 +11,7 @@ return {
       use_local_fs = true,
       enable_builtin = true,
     })
-    vim.cmd([[hi OctoEditable guibg=none]])
+    -- vim.cmd([[hi OctoEditable guibg=none]])
     vim.treesitter.language.register("markdown", "octo")
   end,
   keys = {
