@@ -4,7 +4,8 @@ return {
   opts = function(_, opts)
     opts.options = vim.list_extend(opts.options, {
       -- theme = "catppuccin",
-      theme = "fluoromachine",
+      -- theme = "fluoromachine",
+      theme = "cyberdream",
     })
   end,
 }
