@@ -3,11 +3,14 @@ return {
   dependencies = {
     "kkharji/sqlite.lua",
     "rcarriga/nvim-notify",
-    "ThePrimeagen/harpoon",
+    "debugloop/telescope-undo.nvim",
+    "piersolenski/telescope-import.nvim",
     {
-      "nvim-telescope/telescope-fzf-native.nvim",
-      build = "make",
+      "ThePrimeagen/harpoon",
+      branch = "harpoon2",
+      dependencies = { "nvim-lua/plenary.nvim" },
     },
+    "natecraddock/telescope-zf-native.nvim",
     {
       "danielfalk/smart-open.nvim",
       branch = "0.2.x",
@@ -17,6 +20,7 @@ return {
         { "nvim-telescope/telescope-fzy-native.nvim" },
       },
     },
+    "joshmedeski/telescope-smart-goto.nvim",
   },
   opts = {
     defaults = {
@@ -95,9 +99,12 @@ return {
   config = function(_, opts)
     local telescope = require("telescope")
     telescope.setup(opts)
-    telescope.load_extension("fzf")
     telescope.load_extension("harpoon")
+    telescope.load_extension("import")
     telescope.load_extension("notify")
+    telescope.load_extension("smart_goto")
     telescope.load_extension("smart_open")
+    telescope.load_extension("undo")
+    telescope.load_extension("zf-native")
   end,
 }
