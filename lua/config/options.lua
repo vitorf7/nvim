@@ -50,6 +50,7 @@ vim.opt.swapfile = false -- creates a swapfile
 -- vim.opt.foldmethod = "expr"
 -- vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 vim.opt.colorcolumn = "80,140"
+vim.cmd([[highlight ColorColumn ctermbg=0 guibg=lightgrey]])
 vim.opt.termguicolors = true
 
 -- Transparency for catppuccin theme because of nvim-cmp and lazyvim setting default values.

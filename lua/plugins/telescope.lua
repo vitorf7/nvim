@@ -1,3 +1,4 @@
+local Util = require("lazyvim.util")
 return {
   "telescope.nvim",
   dependencies = {
@@ -21,6 +22,14 @@ return {
       },
     },
     "joshmedeski/telescope-smart-goto.nvim",
+  },
+  keys = {
+    {
+      "<leader><space>",
+      "<cmd>Telescope buffers sort_mru=true sort_lastused=true<cr>",
+      desc = "Switch Buffer",
+    },
+    { "<leader>,", Util.telescope("files"), desc = "Find Files (root dir)" },
   },
   opts = {
     defaults = {
