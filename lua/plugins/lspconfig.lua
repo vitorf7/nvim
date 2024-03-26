@@ -23,6 +23,8 @@ return {
   end,
   ---@class opts PluginLspOpts
   opts = function(_, opts)
+    opts.inlay_hints.enabled = true
+
     opts.servers = opts.servers or {}
     for _, lsp_server in pairs(require("config.utils").servers) do
       lsp_server = vim.split(lsp_server, "@")[1]

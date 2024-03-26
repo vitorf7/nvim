@@ -6,6 +6,7 @@ return {
       toml = { "taplo" },
       sql = { "sql_formatter" },
       mysql = { "sql_formatter" },
+      proto = { "buf" },
     },
     formatters = {
       golines = {
